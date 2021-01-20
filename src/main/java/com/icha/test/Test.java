@@ -5,8 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Test {
-    public static void main(String[] args) {
-        //no. 1
+    public static void main(String[] args) {   
         List<Integer> nums = new ArrayList<>();
         nums.addAll(Arrays.asList(3, 1, 4, 2));
         int x = 4;
@@ -17,8 +16,8 @@ public class Test {
         System.out.println(test3(word, x));//no 3
     }
 
+    //result of substraction <0
     private static List<Integer> test1(List<Integer> nums) {
-        //result of substraction <0
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < nums.size(); i++) {
             int currentNumber = nums.get(i);
@@ -34,14 +33,13 @@ public class Test {
         return result;
     }
 
+    //result = all numbers that divided by any integers in nums doesn't return x
     private static List<Integer> test2(List<Integer> nums, int x) {
-        //result = all numbers that divided by any integers in nums doesn't return x
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < nums.size(); i++) {
             int currentNumber = nums.get(i);
             for (int j = 0; j < nums.size(); j++) {
-                int res = currentNumber / nums.get(j);
-                if (res == x) {
+                if (currentNumber / nums.get(j) == x) {
                     break;
                 } else if (j == nums.size() - 1) {
                     result.add(currentNumber);
@@ -51,8 +49,8 @@ public class Test {
         return result;
     }
 
+       //result = array of strings containing all strings that has length of x
     private static List<String> test3(String word, int x) {
-        //result = array of strings containing all strings that has length of x
         List<String> result = new ArrayList<>();
         String[] arrOfStr = word.split(" ");
         for (String a : arrOfStr) {

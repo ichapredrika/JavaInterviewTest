@@ -41,7 +41,7 @@ public class Test {
             int currentNumber = nums.get(i);
             for (int j = 0; j < nums.size(); j++) {
                 int res = currentNumber / nums.get(j);
-                if (res == 4) {
+                if (res == x) {
                     break;
                 } else if (j == nums.size() - 1) {
                     result.add(currentNumber);
